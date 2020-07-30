@@ -1,0 +1,14 @@
+.box {
+
+  &-next {
+    background-color: #F1F0F7;
+    border-radius: 8px;
+    padding: 16px 48px;
+  }
+
+  &-alert {
+    background-color: #FFA074;
+    border-radius: 8px;
+    padding: 16px 48px;
+  }
+}
