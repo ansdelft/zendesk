@@ -4631,11 +4631,28 @@ html[dir="rtl"] .notification-left-aligned {
 .box-next {
   background-color: #F1F0F7;
   border-radius: 8px;
+  margin-top: 20px;
   padding: 16px 48px;
 }
 
 .box-alert {
   background-color: #FFA074;
   border-radius: 8px;
+  margin-top: 20px;
   padding: 16px 48px;
+}
+
+.box-card {
+  border-radius: 8px;
+  box-shadow: 0 1px 8px 5px #E7E3F1;
+  padding: 20px;
+}
+
+.material-icons {
+  font-size: 18px !important;
+  vertical-align: middle;
+}
+
+a {
+  color: #5830FF;
 }

@@ -1,14 +1,23 @@
+
 .box {
 
   &-next {
     background-color: #F1F0F7;
     border-radius: 8px;
+    margin-top: 20px;
     padding: 16px 48px;
   }
 
   &-alert {
     background-color: #FFA074;
     border-radius: 8px;
+    margin-top: 20px;
     padding: 16px 48px;
+  }
+
+  &-card {
+    border-radius: 8px;
+    box-shadow: 0 1px 8px 5px #E7E3F1;
+    padding: 20px;
   }
 }
