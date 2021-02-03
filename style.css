@@ -2874,7 +2874,7 @@ ul {
 
 @media (min-width: 768px) {
   .collapsible-nav-list li:not([aria-selected="true"]),
-.collapsible-nav-list li:not(.current) {
+  .collapsible-nav-list li:not(.current) {
     display: block;
   }
 }
@@ -2893,7 +2893,7 @@ ul {
 
 @media (min-width: 768px) {
   .collapsible-nav-list li[aria-selected="true"],
-.collapsible-nav-list li.current {
+  .collapsible-nav-list li.current {
     border-bottom: 4px solid $brand_color;
     order: 1;
   }
@@ -3034,7 +3034,7 @@ ul {
 
 @media (min-width: 1024px) {
   .my-activities-table th:first-child,
-.my-activities-table td:first-child {
+  .my-activities-table td:first-child {
     width: 500px;
   }
 }
@@ -4632,20 +4632,20 @@ html[dir="rtl"] .notification-left-aligned {
   background-color: #F1F0F7;
   border-radius: 8px;
   margin-top: 20px;
-  padding: 16px 48px;
+  padding: 8px 32px;
 }
 
 .box-alert {
   background-color: #FFA074;
   border-radius: 8px;
   margin-top: 20px;
-  padding: 16px 48px;
+  padding: 8px 32px;
 }
 
 .box-card {
   border-radius: 8px;
   box-shadow: 0 1px 8px 5px #E7E3F1;
-  padding: 20px;
+  padding: 10px;
 }
 
 .material-icons {
