@@ -376,12 +376,12 @@ ul {
   text-decoration: none;
 }
 
-.button.button-primary:hover, .button-primary.pagination-next-link:hover, .button-primary.pagination-prev-link:hover, .button-primary.pagination-first-link:hover, .button-primary.pagination-last-link:hover, .subscriptions-subscribe button.button-primary:hover, .subscriptions-subscribe button[data-selected="true"]:hover, .requests-table-toolbar .organization-subscribe button.button-primary:hover, .requests-table-toolbar .organization-subscribe button[data-selected="true"]:hover, .community-follow button.button-primary:hover, .article-subscribe button.button-primary:hover, .article-subscribe button[data-selected="true"]:hover, .section-subscribe button.button-primary:hover, .section-subscribe button[data-selected="true"]:hover, .split-button button:hover, .button.button-primary:focus, .button-primary.pagination-next-link:focus, .button-primary.pagination-prev-link:focus, .button-primary.pagination-first-link:focus, .button-primary.pagination-last-link:focus, .subscriptions-subscribe button.button-primary:focus, .subscriptions-subscribe button[data-selected="true"]:focus, .requests-table-toolbar .organization-subscribe button.button-primary:focus, .requests-table-toolbar .organization-subscribe button[data-selected="true"]:focus, .community-follow button.button-primary:focus, .article-subscribe button.button-primary:focus, .article-subscribe button[data-selected="true"]:focus, .section-subscribe button.button-primary:focus, .section-subscribe button[data-selected="true"]:focus, .split-button button.button-primary:focus, .button.button-primary:active, .button-primary.pagination-next-link:active, .button-primary.pagination-prev-link:active, .button-primary.pagination-first-link:active, .button-primary.pagination-last-link:active, .subscriptions-subscribe button.button-primary:active, .subscriptions-subscribe button[data-selected="true"]:active, .requests-table-toolbar .organization-subscribe button.button-primary:active, .requests-table-toolbar .organization-subscribe button[data-selected="true"]:active, .community-follow button.button-primary:active, .article-subscribe button.button-primary:active, .article-subscribe button[data-selected="true"]:active, .section-subscribe button.button-primary:active, .section-subscribe button[data-selected="true"]:active, .split-button button.button-primary:active {
+.button.button-primary:hover, .split-button button:hover, .section-subscribe button.button-primary:hover, .section-subscribe button:hover[data-selected="true"], .article-subscribe button.button-primary:hover, .article-subscribe button:hover[data-selected="true"], .community-follow button.button-primary:hover, .requests-table-toolbar .organization-subscribe button.button-primary:hover, .requests-table-toolbar .organization-subscribe button:hover[data-selected="true"], .subscriptions-subscribe button.button-primary:hover, .subscriptions-subscribe button:hover[data-selected="true"], .button-primary.pagination-next-link:hover, .button-primary.pagination-prev-link:hover, .button-primary.pagination-first-link:hover, .button-primary.pagination-last-link:hover, .button.button-primary:focus, .split-button button.button-primary:focus, .section-subscribe button.button-primary:focus, .section-subscribe button:focus[data-selected="true"], .article-subscribe button.button-primary:focus, .article-subscribe button:focus[data-selected="true"], .community-follow button.button-primary:focus, .requests-table-toolbar .organization-subscribe button.button-primary:focus, .requests-table-toolbar .organization-subscribe button:focus[data-selected="true"], .subscriptions-subscribe button.button-primary:focus, .subscriptions-subscribe button:focus[data-selected="true"], .button-primary.pagination-next-link:focus, .button-primary.pagination-prev-link:focus, .button-primary.pagination-first-link:focus, .button-primary.pagination-last-link:focus, .button.button-primary:active, .split-button button.button-primary:active, .section-subscribe button.button-primary:active, .section-subscribe button:active[data-selected="true"], .article-subscribe button.button-primary:active, .article-subscribe button:active[data-selected="true"], .community-follow button.button-primary:active, .requests-table-toolbar .organization-subscribe button.button-primary:active, .requests-table-toolbar .organization-subscribe button:active[data-selected="true"], .subscriptions-subscribe button.button-primary:active, .subscriptions-subscribe button:active[data-selected="true"], .button-primary.pagination-next-link:active, .button-primary.pagination-prev-link:active, .button-primary.pagination-first-link:active, .button-primary.pagination-last-link:active {
   background-color: darken($brand_color, 20%);
   border-color: darken($brand_color, 20%);
 }
 
-.button[data-disabled], .pagination-next-link[data-disabled], .pagination-prev-link[data-disabled], .pagination-first-link[data-disabled], .pagination-last-link[data-disabled], .subscriptions-subscribe button[data-disabled], .requests-table-toolbar .organization-subscribe button[data-disabled], .community-follow button[data-disabled], .article-subscribe button[data-disabled], .section-subscribe button[data-disabled], .split-button button[data-disabled] {
+.button[data-disabled], .split-button button[data-disabled], .section-subscribe button[data-disabled], .article-subscribe button[data-disabled], .community-follow button[data-disabled], .requests-table-toolbar .organization-subscribe button[data-disabled], .subscriptions-subscribe button[data-disabled], .pagination-next-link[data-disabled], .pagination-prev-link[data-disabled], .pagination-first-link[data-disabled], .pagination-last-link[data-disabled] {
   cursor: default;
 }
 
@@ -636,7 +636,7 @@ ul {
 }
 
 .form .suggestion-list li a:visited {
-  color: darken($link_color, 20%);
+  color: $visited_link_color;
 }
 
 /***** Header *****/
@@ -660,6 +660,20 @@ ul {
 
 .logo img {
   max-height: 37px;
+  vertical-align: middle;
+}
+
+.logo span {
+  margin: 0 10px;
+  color: $brand_color;
+}
+
+.logo a {
+  display: inline-block;
+}
+
+.logo a:hover, .logo a:focus, .logo a:active {
+  text-decoration: none;
 }
 
 .user-nav {
@@ -914,7 +928,7 @@ ul {
   }
 }
 
-.footer-language-selector {
+.footer-language-selector button {
   color: lighten($text_color, 20%);
   display: inline-block;
   font-weight: 300;
@@ -1273,6 +1287,7 @@ ul {
 
 .community-image {
   min-height: 300px;
+  margin-top: 32px;
   background-image: url($community_image);
   background-position: center;
   background-repeat: no-repeat;
@@ -1482,10 +1497,6 @@ ul {
   margin: 40px 0;
 }
 
-.section-list--collapsed .section-list-item:nth-child(1n + 6) {
-  display: none;
-}
-
 .section-list-item {
   border-bottom: 1px solid #ddd;
   font-size: 16px;
@@ -1630,7 +1641,7 @@ ul {
 }
 
 .article-body a:visited {
-  color: darken($link_color, 20%);
+  color: $visited_link_color;
 }
 
 .article-body code {
@@ -2089,7 +2100,7 @@ ul {
 }
 
 .comment-body a:visited {
-  color: darken($link_color, 20%);
+  color: $visited_link_color;
 }
 
 .comment-body code {
@@ -2398,7 +2409,7 @@ ul {
 }
 
 .striped-list-title:visited {
-  color: darken($link_color, 20%);
+  color: $visited_link_color;
 }
 
 .striped-list .meta-group {
@@ -2521,10 +2532,6 @@ ul {
 
 .status-label-hold {
   background-color: #000;
-}
-
-.status-label-open, .status-label-closed, .status-label-solved, .status-label-new, .status-label-hold, .status-label-pending {
-  text-transform: lowercase;
 }
 
 /***** Post *****/
@@ -2669,7 +2676,7 @@ ul {
 }
 
 .post-body a:visited {
-  color: darken($link_color, 20%);
+  color: $visited_link_color;
 }
 
 .post-body code {
@@ -2753,6 +2760,50 @@ ul {
   .post-comments {
     margin-bottom: 0;
   }
+}
+
+/***** Community Badges *****/
+/* Styles labels used next to the authors of article comments, community posts, and community comments */
+.community-badge-titles {
+  background-color: #04444d;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 8px;
+  vertical-align: middle;
+  white-space: nowrap;
+  display: inline-flex;
+  line-height: 20px;
+  margin: 0 2px;
+}
+
+.community-badge-container-achievements {
+  padding-top: 5px;
+}
+
+.community-badge-achievements {
+  display: inline-block;
+  margin: 0 3px 0 0;
+}
+
+[dir="rtl"] .community-badge-achievements {
+  margin: 0 0 0 3px;
+}
+
+.community-badge-achievements img {
+  width: 22px;
+  height: 22px;
+}
+
+.community-badge-titles img {
+  width: 20px;
+  height: 20px;
+}
+
+.profile-info .community-badge-achievements img {
+  width: 40px;
+  height: 40px;
 }
 
 /* Navigation element that collapses on mobile */
@@ -3516,6 +3567,14 @@ ul {
   display: block;
 }
 
+.meta-group-opposite {
+  float: right;
+}
+
+[dir="rtl"] .meta-group-opposite {
+  float: left;
+}
+
 .meta-group * {
   display: inline;
 }
@@ -3568,8 +3627,8 @@ ul {
 }
 
 .profile-avatar .user-avatar {
-  width: 65px;
-  height: 65px;
+  width: 80px;
+  height: 80px;
 }
 
 .profile-avatar .icon-agent {
@@ -3593,6 +3652,7 @@ ul {
 
 .profile-header .basic-info .name {
   margin: 0;
+  line-height: 25px;
 }
 
 .profile-header .options {
@@ -3866,6 +3926,65 @@ ul {
     margin-left: 0;
     margin-right: 20px;
   }
+}
+
+.profile-badges-items {
+  margin-top: 25px;
+}
+
+.profile-badges-item {
+  border-top: 1px solid #ddd;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 27px 12px;
+}
+
+.profile-badges-item > div {
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+.profile-badges-item-image {
+  height: 40px;
+  width: 40px;
+  margin-right: 12px;
+}
+
+.profile-badges-item-image img {
+  max-height: 40px;
+}
+
+[dir="rtl"] .profile-badges-item-image {
+  margin-left: 12px;
+  margin-right: 0;
+}
+
+.profile-badges-item-title, .profile-badges-item-metadata-title {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.profile-badges-item-title {
+  font-weight: 600;
+}
+
+.profile-badges-item-description, .profile-badges-item-metadata-description {
+  color: lighten($text_color, 20%);
+  font-size: 13px;
+  margin: 0;
+}
+
+.profile-badges-item-metadata {
+  margin-left: auto;
+  text-align: right;
+}
+
+[dir="rtl"] .profile-badges-item-metadata {
+  margin-left: 0;
+  margin-right: auto;
+  text-align: left;
 }
 
 .profile-contribution {
