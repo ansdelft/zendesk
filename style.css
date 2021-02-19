@@ -4755,10 +4755,18 @@ html[dir="rtl"] .notification-left-aligned {
 }
 
 .box-alert {
-  background-color: #FFA074;
-  border-radius: 8px;
+  background-color: #fff9e4;
+  border: 2px solid #ffb703;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #4D4D4F;
+  font-weight: 700!important;
   margin-top: 20px;
-  padding: 8px 32px;
+}
+
+.box-alert .material-icons {
+  color: #ffb703;
 }
 
 .box-card {
