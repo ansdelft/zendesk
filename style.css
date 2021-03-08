@@ -4789,7 +4789,8 @@ html[dir="rtl"] .notification-left-aligned {
   padding: 10px;
 }
 
-.material-icons {
+.material-icons,
+.material-icons-outlined {
   font-size: 18px !important;
   vertical-align: middle;
 }
