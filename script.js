@@ -22,6 +22,12 @@ document.addEventListener('DOMContentLoaded', function() {
     return null;
   }
 
+  // Change sign in text
+  var login = document.querySelector('.login');
+  if (login) {
+    login.innerText = 'My tickets';
+  }
+
   // social share popups
   Array.prototype.forEach.call(document.querySelectorAll('.share a'), function(anchor) {
     anchor.addEventListener('click', function(e) {
