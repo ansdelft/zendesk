@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Change sign in text
-  var login = document.querySelector('.login');
+  var login = document.querySelector('.sign-in');
   if (login) {
     login.innerText = 'My tickets';
   }
